@@ -1,91 +1,17 @@
-# <Título do projeto>
+# Classificação de espécies de pinguins
 
-Insira aqui um resumo do projeto que será construído. Tente apresentar uma justificativa para o projeto. É desejável que também se insira um [graphical abstract](https://www.elsevier.com/authors/tools-and-resources/visual-abstract).
+![Imagem dos pinguins.](docs/assets/images/penguins.png)
+
+O objetivo principal do projeto é realizar uma **análise comparativa de diferentes modelos de aprendizado de máquina** utilizando o conjunto de dados público "`Palmer Archipelago (Antarctica) penguin data`." Além disso, uma análise **exploratória de dados (EDA)** foi realizada para entender melhor as características dos pinguins. As variáveis do conjunto de dados incluem tanto qualitativas nominais (`species`, `island`, `sex`) quanto quantitativas contínuas (`bill_length_mm`, `bill_depth_mm`, `flipper_length_mm`, `body_mass_g`). As etapas de pré-processamento envolveram codificação de variáveis categóricas e tratamento de valores ausentes e outliers, além de normalização. A EDA revelou insights como a predominância da espécie Adelie, a maioria dos pinguins originários da ilha Biscoe, e a alta variabilidade no comprimento do bico, além de correlações interessantes entre as características físicas e as espécies de pinguins.
+
+Foram utilizados quatro modelos de classificação (K-Nearest Neighbors, Support Vector Machine, Decision Tree e Random Forest) e suas performances foram avaliadas usando métricas como acurácia, precisão, recall e F1-score. A busca em grade pelos hiperparâmetros indicou que o modelo KNN apresentou o melhor desempenho. As ferramentas e bibliotecas utilizadas no projeto incluem Python, pandas, scikit-learn, seaborn, matplotlib e numpy. O próximo passo é criar um serviço para disponibilização do modelo, consolidando assim a aplicação prática dos resultados obtidos.
+
 
 ## Desenvolvedores
- - [Nome do desenvolvedor #1](url-do-github-do-desenvolvedor-#1)
- - [Nome do desenvolvedor #2](url-do-github-do-desenvolvedor-#2)
- - [Nome do desenvolvedor #3](url-do-github-do-desenvolvedor-#3)
- - [Nome do desenvolvedor #4](url-do-github-do-desenvolvedor-#4)
- - ...
-
----
-
-> **Nota**: todo o texto abaixo é somente para entendimento do usuário do template. Por favor remova-o quando for atualizar este `README.md`.
-
-## Funcionalidades
-
-Esse template foi inicialmente baseado no [template de ciência de dados do cookiecutter](https://drivendata.github.io/cookiecutter-data-science/), mas ao longo do tempo várias modificações foram sendo realizadas. Atualmente o template tem as seguintes características:
- - Utilização do arquivo `pyproject.toml` como centralizador de dependências;
- - Configuração para criação de aplicação `streamlit`;
- - Utilização de [jupyter notebooks](https://jupyter.org/) para arquivos de análise;
- - Documentação com o [mkdocs](https://www.mkdocs.org/) ([material design](https://squidfunk.github.io/mkdocs-material/) theme)
-
-## Instruções
-
-### Requisitos
-
-Para utilizar este template, você precisará de um ambiente com os seguintes softwares:
- - git
- - Python 3.8
- - Poetry `1.1.13` ou superior
-
-É aconselhável o uso do `pyenv` para o gerenciamento de versões do Python.
-
-### Iniciando um novo projeto
-
-Para iniciar um novo projeto você precisa ter instalado na sua máquina as aplicações citadas na seção anterior, depois disso basta:
-
-1. clicar no botão **Use this template** (ou "Usar este modelo").
-2. Digitar um nome para seu repositório e uma descrição opcional.
-3. Escolher a visibilidade do projeto (Publica ou privada).
-4. Clicar em **Create repository from template** (Criar repositório a partir do modelo).
-
-Pronto, acaba de criar um repositório a partir deste modelo. Para mais informações sobre o uso de templates, acesse a [documentação oficial](https://docs.github.com/pt/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+ - Madson Dias ([@omadson](http://github.com/omadson))
 
 
-### Contribuindo com um repositório já criado
-
-Depois de criar o repositório, para começar a modificá-lo e/ou contribuir com repositórios já criados,  você precisa cloná-lo. Para isso, siga os seguintes passos:
-
-1. Acima da lista de arquivos, clique no botão **Code** (em verde).
-2. Copie a URL para o repositório.
-    - Tente clonar utilizando uma chave **SSH**. Para isso, clique na aba **SSH** e em seguida clique no ícone de cópia.
-3. Abra o terminal.
-4. Altere o diretório de trabalho atual para o local que deseja ter o diretório clonado.
-5. Digite `git clone` e cole a URL que você copiou anteriormente:
-
-```
-git clone git@github.com:NOME-DE-USUARIO/REPOSITORIO.git
-```
-6. Pressione **Enter** para criar seu clone local.
-
-Proto, com isso você acaba de clonar um repositório. Para mais informações sobre a clonagem de arquivos, acesse a [documentação oficial](https://docs.github.com/pt/repositories/creating-and-managing-repositories/cloning-a-repository).
-
-Com o repositório clonado, você precisa navegar até a pasta local, usando o comando :
-
-```
-cd REPOSITORIO
-```
-
-Estando na pasta do repositório, basta instalar as dependências do projeto utilizando o comando:
-
-```
-poetry install
-```
-
-Ele irá instalar todas as dependências contidas no arquivo `pyproject.toml`. Depois disso basta ativar o ambiente virtual criado pelo Poetry utilizando o comando:
-
-```
-poetry shell
-```
-
-Para mais informações sobre os comandos do Poetry, visite a [documentação oficial](https://python-poetry.org/docs/).
-
-Para contribuir com um projeto, tente utilizar uma metodologia adequada. Utilize [este artigo](https://omadson.github.io/site/blog/2022/software-development-workflow/) para obter mais informações.
-
-
-### Organização de diretórios
+## Organização de diretórios
 
 
 ```
@@ -104,10 +30,8 @@ Para contribuir com um projeto, tente utilizar uma metodologia adequada. Utilize
 │   ├── deployment/    # Classes e funções utilizadas para implantação do modelo
 │   └── model/         # Classes e funções utilizadas para modelagem
 ├── app.py             # Arquivo com o código da aplicação do streamlit
-├── Procfile           # Arquivo de configuração do heroku
 ├── pyproject.toml     # Arquivo de dependências para reprodução do projeto
 ├── poetry.lock        # Arquivo com sub-dependências do projeto principal
-├── README.md          # Informações gerais do projeto
-└── tasks.py           # Arquivo com funções para criação de tarefas utilizadas pelo invoke
+└── README.md          # Informações gerais do projeto
 
 ```
